@@ -2,10 +2,10 @@
 import { site, telHref, smsHref } from '../lib/site';
 ---
 <aside class="flex flex-col gap-4">
-  <div class="bg-surface border border-line rounded p-6">
-    <div class="text-[12px] font-semibold uppercase tracking-[0.14em] text-accent">Prefer to talk?</div>
-    <h3 class="h-display text-[22px] font-semibold text-ink mt-2 mb-3">We answer the phone ourselves.</h3>
-    <p class="text-[14px] text-muted leading-[1.55] mb-4">
+  <div class="bg-surface border border-line rounded p-7">
+    <div class="text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">Prefer to talk?</div>
+    <h3 class="h-display text-[22px] tracking-[-0.015em] font-semibold text-ink mt-2.5 mb-3">We answer the phone ourselves.</h3>
+    <p class="text-[14px] text-muted leading-[1.6] mb-5">
       {site.experience}. Call or text anytime — we respond fast and quote honest.
     </p>
     <a href={telHref} class="btn btn-primary w-full">
@@ -18,25 +18,25 @@ import { site, telHref, smsHref } from '../lib/site';
     </a>
   </div>
 
-  <div class="bg-surface border border-line rounded p-6">
-    <div class="text-[12px] font-semibold uppercase tracking-[0.14em] text-muted mb-3">What happens next</div>
-    <ol class="space-y-3.5">
+  <div class="bg-surface border border-line rounded p-7">
+    <div class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted mb-4">What happens next</div>
+    <ol class="space-y-4">
       {[
         'We review your request',
         'We contact you within 24 hours to schedule a site visit',
         'You get an in-person quote, no pressure',
       ].map((s, i) => (
-        <li class="flex gap-3 items-start text-[14px] text-ink2">
-          <span class="shrink-0 inline-flex items-center justify-center w-5.5 h-5.5 rounded-full bg-accent text-white text-[11px] font-bold" style="width:22px;height:22px;">{i + 1}</span>
+        <li class="flex gap-3 items-start text-[14px] text-ink2 leading-[1.5]">
+          <span class="shrink-0 inline-flex items-center justify-center rounded-full bg-accent text-white text-[11px] font-bold" style="width:22px;height:22px;line-height:1;">{i + 1}</span>
           <span>{s}</span>
         </li>
       ))}
     </ol>
   </div>
 
-  <div class="bg-surface border border-line rounded p-6">
-    <div class="text-[12px] font-semibold uppercase tracking-[0.14em] text-muted mb-3">Service area</div>
-    <p class="text-[14px] text-ink2 leading-[1.6]">
+  <div class="bg-surface border border-line rounded p-7">
+    <div class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted mb-4">Service area</div>
+    <p class="text-[14px] text-ink2 leading-[1.65]">
       {site.areaLong}. {site.estimatePolicy}
     </p>
   </div>

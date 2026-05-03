@@ -5,20 +5,20 @@ const title = `Thanks · ${site.brand}`;
 ---
 <BaseLayout title={title} description="Your estimate request was received." pathname="/thanks">
   <section class="bg-bg">
-    <div class="container-x py-20 md:py-28">
+    <div class="container-x py-24 md:py-32">
       <div class="max-w-[640px] mx-auto text-center">
-        <div class="inline-flex w-16 h-16 rounded-full bg-accent text-white items-center justify-center mb-5">
+        <div class="inline-flex w-16 h-16 rounded-full bg-accent text-white items-center justify-center mb-6">
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
         </div>
-        <h1 class="h-display text-[clamp(34px,5vw,52px)] leading-[1.05] tracking-[-0.02em] font-medium">Got it. Talk soon.</h1>
-        <p class="mt-5 text-[17px] text-muted leading-[1.55]">
+        <h1 class="h-display text-[clamp(32px,5vw,52px)] leading-[1.05] tracking-[-0.025em] font-medium text-balance">Got it. Talk soon.</h1>
+        <p class="mt-5 text-[17px] md:text-[18px] text-muted leading-[1.6]">
           Thanks for reaching out. We'll review your request and contact you within 24 hours to schedule a free site visit, where we'll give you an honest, accurate quote in person.
         </p>
-        <div class="mt-7 flex justify-center flex-wrap gap-3">
+        <div class="mt-8 flex justify-center flex-wrap gap-3">
           <a href={telHref} class="btn btn-primary">Call {site.phone}</a>
           <a href={smsHref} class="btn btn-secondary">Text {site.phone}</a>
         </div>
-        <p class="mt-8 text-[14px] text-muted">
+        <p class="mt-10 text-[14px] text-muted">
           <a href="/" class="underline-offset-4 hover:underline">Back to homepage</a>
         </p>
       </div>

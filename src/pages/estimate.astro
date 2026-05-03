@@ -15,17 +15,17 @@ const description = 'Request a free in-person floor cleaning estimate. We respon
   pathname="/estimate"
   jsonLd={[localBusiness]}
 >
-  <section class="bg-bg pt-12 pb-20 md:pt-16 md:pb-28">
+  <section class="bg-bg pt-14 pb-20 md:pt-20 md:pb-28">
     <div class="container-x">
       <div class="max-w-[760px]">
         <div class="eyebrow mb-4">Free estimate</div>
-        <h1 class="h-display text-[clamp(34px,5vw,56px)] leading-[1.05] tracking-[-0.025em] font-medium">Tell us about the floor.</h1>
-        <p class="mt-4 text-[17px] text-muted leading-[1.55] max-w-[620px]">
+        <h1 class="h-display text-[clamp(32px,5vw,52px)] leading-[1.05] tracking-[-0.028em] font-medium text-balance">Tell us about the floor.</h1>
+        <p class="mt-5 text-[17px] md:text-[18px] text-muted leading-[1.6] max-w-[620px]">
           Fill out the form. We'll contact you within 24 hours to schedule a free site visit, where we'll give you honest pricing in person. No obligation.
         </p>
       </div>
 
-      <div class="mt-10 grid gap-9 lg:grid-cols-[1.6fr_1fr]">
+      <div class="mt-12 grid gap-10 lg:gap-12 lg:grid-cols-[1.6fr_1fr]">
         <EstimateForm source="estimate" />
         <TrustPanel />
       </div>

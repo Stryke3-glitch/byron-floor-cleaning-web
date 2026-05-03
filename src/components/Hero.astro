@@ -24,16 +24,16 @@ const isDark = variant !== 'light';
   class:list={[
     'border-b',
     isDark ? 'bg-hero-bg text-hero-ink border-transparent' : 'bg-surface text-ink border-line',
-    variant === 'home' ? 'py-20 md:py-28' : 'py-14 md:py-20',
+    variant === 'home' ? 'py-20 md:py-28' : 'py-16 md:py-20',
   ]}
 >
-  <div class="container-x grid items-center gap-12 md:grid-cols-[1.15fr_1fr]">
+  <div class="container-x grid items-center gap-12 md:gap-14 md:grid-cols-[1.15fr_1fr]">
     <div>
       <div class:list={['eyebrow mb-5', isDark ? 'text-accent-bright' : 'text-accent']}>{eyebrow}</div>
       <h1
         class:list={[
-          'h-display font-medium leading-[1.05] tracking-[-0.025em]',
-          variant === 'home' ? 'text-[clamp(40px,7vw,76px)]' : 'text-[clamp(34px,5vw,56px)]',
+          'h-display font-medium leading-[1.04] tracking-[-0.028em] text-balance',
+          variant === 'home' ? 'text-[clamp(40px,6.5vw,72px)]' : 'text-[clamp(32px,5vw,52px)]',
         ]}
       >
         {italicWord ? (
@@ -41,7 +41,7 @@ const isDark = variant !== 'light';
         ) : title}
       </h1>
       {body && (
-        <p class:list={['mt-6 text-[17px] leading-[1.55] max-w-[540px]', isDark ? 'text-hero-sub' : 'text-muted']}>{body}</p>
+        <p class:list={['mt-6 text-[17px] md:text-[18px] leading-[1.55] max-w-[560px]', isDark ? 'text-hero-sub' : 'text-muted']}>{body}</p>
       )}
       {showCtas && (
         <div class="mt-8 flex flex-wrap gap-3">
@@ -56,7 +56,7 @@ const isDark = variant !== 'light';
         </div>
       )}
       {variant === 'home' && (
-        <div class:list={['mt-9 flex flex-wrap gap-x-6 gap-y-2 text-[13px]', isDark ? 'text-hero-sub' : 'text-muted']}>
+        <div class:list={['mt-10 pt-7 border-t flex flex-wrap gap-x-7 gap-y-2.5 text-[13px]', isDark ? 'text-hero-sub border-white/10' : 'text-muted border-line']}>
           <span class="inline-flex items-center gap-2">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
             {site.experience}
@@ -85,9 +85,9 @@ const isDark = variant !== 'light';
           width="800"
           height="1000"
         />
-        <div class="absolute bottom-4 left-4 right-4 bg-white/95 border border-line rounded p-3.5 backdrop-blur-sm">
-          <div class="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">Latest job</div>
-          <div class="text-[14px] text-ink mt-1">VCT classroom · stripped &amp; waxed to a high-gloss finish</div>
+        <div class="absolute bottom-4 left-4 right-4 bg-white/95 border border-line rounded p-4 backdrop-blur-md">
+          <div class="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">Latest job</div>
+          <div class="text-[14px] text-ink mt-1.5 leading-[1.4]">VCT classroom · stripped &amp; waxed to a high-gloss finish</div>
         </div>
       </div>
     )}

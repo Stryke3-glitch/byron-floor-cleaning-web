@@ -2,14 +2,14 @@
 import { beforeAfter } from '../lib/site';
 ---
 <section class="bg-bg">
-  <div class="container-x py-16 md:py-24">
+  <div class="container-x py-20 md:py-28">
     <div class="max-w-[760px]">
       <div class="eyebrow mb-4">Before &amp; after</div>
-      <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight">Real floors. Real results.</h2>
-      <p class="mt-3.5 text-[17px] text-muted leading-[1.55]">A look at recent jobs. Drag the slider on the first to compare before and after.</p>
+      <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-[-0.02em] text-balance">Real floors. Real results.</h2>
+      <p class="mt-4 text-[17px] text-muted leading-[1.6] max-w-[640px]">A look at recent jobs. Drag a slider to compare before and after.</p>
     </div>
 
-    <div class="mt-10 grid gap-8 md:grid-cols-3">
+    <div class="mt-12 grid gap-8 md:grid-cols-3">
       {beforeAfter.map((pair, i) => (
         <figure>
           {pair.kind === 'slider' ? (
@@ -63,9 +63,9 @@ import { beforeAfter } from '../lib/site';
               <span class="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-[0.18em] bg-white/85 text-ink px-1.5 py-0.5 rounded-sm pointer-events-none">After</span>
             </div>
           )}
-          <figcaption class="mt-3">
-            <div class="font-semibold text-ink text-[15px]">{pair.caption}</div>
-            <div class="text-muted text-[13px] mt-0.5">{pair.detail}</div>
+          <figcaption class="mt-4">
+            <div class="font-semibold text-ink text-[15px] leading-[1.4]">{pair.caption}</div>
+            <div class="text-muted text-[13px] mt-1">{pair.detail}</div>
           </figcaption>
         </figure>
       ))}
