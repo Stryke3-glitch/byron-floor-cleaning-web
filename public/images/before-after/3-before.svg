@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Floor sample">
+  <defs>
+    <pattern id="tile-before-36" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)">
+      <rect width="160" height="160" fill="hsl(24 12% 36%)"/>
+      <path d="M0 0H160M0 160H160M0 0V160M160 0V160" stroke="hsl(24 10% 18%)" stroke-width="2"/>
+    </pattern>
+    <linearGradient id="shine-before-36" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vignette-before-36" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#tile-before-36)"/>
+  <circle cx="220" cy="320" r="38" fill="#000" opacity="0.22"/>
+       <circle cx="560" cy="420" r="56" fill="#000" opacity="0.18"/>
+       <path d="M80 240 Q160 280 240 240 T420 260" stroke="#000" stroke-width="2" fill="none" opacity="0.22"/>
+       <path d="M500 540 Q580 560 660 540" stroke="#000" stroke-width="2" fill="none" opacity="0.18"/>
+  <rect width="800" height="600" fill="url(#shine-before-36)"/>
+  <rect width="800" height="600" fill="url(#vignette-before-36)"/>
+</svg>

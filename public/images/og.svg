@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="t" x="0" y="0" width="180" height="180" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)">
+      <rect width="180" height="180" fill="hsl(32 14% 78%)"/>
+      <path d="M0 0H180M0 180H180M0 0V180M180 0V180" stroke="hsl(32 12% 60%)" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0F1115"/>
+  <rect x="640" y="0" width="560" height="630" fill="url(#t)"/>
+  <text x="60" y="280" font-family="Georgia, serif" font-weight="600" font-size="72" fill="#FAF8F3">Floors that look</text>
+  <text x="60" y="360" font-family="Georgia, serif" font-style="italic" font-weight="600" font-size="72" fill="#E5B970">new again.</text>
+  <text x="60" y="430" font-family="Inter, sans-serif" font-weight="500" font-size="22" fill="#C8C2B4">Byron Floor Cleaning · New Jersey</text>
+  <text x="60" y="465" font-family="Inter, sans-serif" font-weight="500" font-size="20" fill="#8A6420">25+ years of floor care experience</text>
+</svg>

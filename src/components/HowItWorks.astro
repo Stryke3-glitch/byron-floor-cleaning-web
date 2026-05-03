@@ -1,0 +1,38 @@
+---
+const steps = [
+  {
+    n: '01',
+    title: 'Tell us about the floor',
+    body: 'A few quick details by phone, text, or web form. Square footage, type, and what is going on with it.',
+  },
+  {
+    n: '02',
+    title: 'We schedule a site visit',
+    body: 'Within 24 hours of your request, we reach out to set up a quick on-site walkthrough so we can give you an honest, accurate quote.',
+  },
+  {
+    n: '03',
+    title: 'We get to work',
+    body: "Once you approve the quote and pay the deposit, we work on your schedule. Overnights and weekends available so we don't disrupt your business.",
+  },
+];
+---
+<section class="bg-bg">
+  <div class="container-x py-16 md:py-24">
+    <div class="max-w-[760px]">
+      <div class="eyebrow mb-4">How it works</div>
+      <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight">From request to clean floor in three steps.</h2>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {steps.map((s) => (
+        <div class="relative pt-7">
+          <div class="absolute inset-x-0 top-0 h-px bg-line"></div>
+          <div class="absolute top-0 left-0 h-[3px] w-10 bg-accent -translate-y-px"></div>
+          <div class="text-[12px] font-semibold tracking-[0.14em] text-muted">STEP {s.n}</div>
+          <h3 class="h-display text-[24px] leading-[1.2] mt-2 mb-2.5 text-ink">{s.title}</h3>
+          <p class="text-[15px] text-muted leading-[1.55]">{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

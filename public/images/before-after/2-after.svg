@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Floor sample">
+  <defs>
+    <pattern id="tile-after-82" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)">
+      <rect width="160" height="160" fill="hsl(28 12% 82%)"/>
+      <path d="M0 0H160M0 160H160M0 0V160M160 0V160" stroke="hsl(28 10% 64%)" stroke-width="2"/>
+    </pattern>
+    <linearGradient id="shine-after-82" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vignette-after-82" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#tile-after-82)"/>
+  <ellipse cx="400" cy="160" rx="520" ry="52" fill="#fff" opacity="0.22"/>
+       <ellipse cx="400" cy="220" rx="320" ry="20" fill="#fff" opacity="0.12"/>
+  <rect width="800" height="600" fill="url(#shine-after-82)"/>
+  <rect width="800" height="600" fill="url(#vignette-after-82)"/>
+</svg>

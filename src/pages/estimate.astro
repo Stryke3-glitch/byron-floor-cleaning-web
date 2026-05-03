@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EstimateForm from '../components/EstimateForm.astro';
+import TrustPanel from '../components/TrustPanel.astro';
+import Faq from '../components/Faq.astro';
+import { site } from '../lib/site';
+import { localBusiness } from '../lib/jsonld';
+
+const title = `Get a Free Floor Cleaning Estimate · ${site.brand} · NJ`;
+const description = 'Request a free in-person floor cleaning estimate. We respond within 24 hours to schedule. Serving New Jersey.';
+---
+<BaseLayout
+  title={title}
+  description={description}
+  pathname="/estimate"
+  jsonLd={[localBusiness]}
+>
+  <section class="bg-bg pt-12 pb-20 md:pt-16 md:pb-28">
+    <div class="container-x">
+      <div class="max-w-[760px]">
+        <div class="eyebrow mb-4">Free estimate</div>
+        <h1 class="h-display text-[clamp(34px,5vw,56px)] leading-[1.05] tracking-[-0.025em] font-medium">Tell us about the floor.</h1>
+        <p class="mt-4 text-[17px] text-muted leading-[1.55] max-w-[620px]">
+          Fill out the form. We'll contact you within 24 hours to schedule a free site visit, where we'll give you honest pricing in person. No obligation.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-9 lg:grid-cols-[1.6fr_1fr]">
+        <EstimateForm source="estimate" />
+        <TrustPanel />
+      </div>
+    </div>
+  </section>
+  <Faq />
+</BaseLayout>

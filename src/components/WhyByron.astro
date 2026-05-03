@@ -1,0 +1,56 @@
+---
+const items = [
+  {
+    n: '25+',
+    label: 'years experience',
+    body: 'Decades of hands-on floor care work. We have seen every kind of floor and every kind of mess.',
+    icon: 'clock',
+  },
+  {
+    n: 'Free',
+    label: 'estimates in our standard service area',
+    body: 'No-obligation estimates for local properties. For locations outside our normal service area, a travel fee may apply and can be credited toward the invoice if you book.',
+    icon: 'shield',
+  },
+  {
+    n: '24h',
+    label: 'reply window',
+    body: 'Send a request and we will reach out within 24 hours to schedule your site visit.',
+    icon: 'msg',
+  },
+  {
+    n: 'Owner',
+    label: 'led work, one standard',
+    body: 'Residential and commercial. Homes, schools, offices, and stores. Owner-led work, one crew, one standard.',
+    icon: 'sparkle',
+  },
+];
+const icons: Record<string, string> = {
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+  msg: '<path d="M4 5h16v11H8l-4 4z"/>',
+  sparkle: '<path d="M12 3v6M12 15v6M3 12h6M15 12h6M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/>',
+};
+---
+<section class="bg-bg">
+  <div class="container-x py-16 md:py-24">
+    <div class="max-w-[760px]">
+      <div class="eyebrow mb-4">Why Byron</div>
+      <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight">What you can count on.</h2>
+    </div>
+    <div class="mt-10 grid gap-px bg-line border border-line rounded overflow-hidden sm:grid-cols-2 lg:grid-cols-4">
+      {items.map((it) => (
+        <div class="bg-surface p-7">
+          <div class="text-accent">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icons[it.icon]} />
+          </div>
+          <div class="flex items-baseline gap-2 mt-3.5">
+            <span class="h-display text-[36px] font-semibold tracking-[-0.02em] text-ink">{it.n}</span>
+            <span class="text-[12px] text-muted uppercase tracking-[0.1em]">{it.label}</span>
+          </div>
+          <p class="text-[14px] text-muted mt-2 leading-[1.55]">{it.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
