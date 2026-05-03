@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Byron Floor Cleaning , Strategy & Build Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f1115;
+    --ink-2:#272a31;
+    --muted:#5a6068;
+    --line:#e7e4dc;
+    --paper:#faf8f3;
+    --gold:#b8893a;
+    --gold-deep:#8a6420;
+    --bad:#a23b2c;
+    --good:#3e6b3a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:64px 32px 120px}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em;color:var(--ink);margin:0}
+  h1{font-size:48px;line-height:1.05;letter-spacing:-0.025em}
+  h2{font-size:30px;line-height:1.15;margin:64px 0 8px;letter-spacing:-0.02em}
+  h3{font-size:20px;line-height:1.25;margin:32px 0 6px;font-weight:600}
+  h4{font-size:15px;font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold-deep);margin:24px 0 6px}
+  p{margin:8px 0 14px;color:var(--ink-2)}
+  ul,ol{margin:8px 0 14px;padding-left:22px;color:var(--ink-2)}
+  li{margin:4px 0}
+  a{color:var(--gold-deep)}
+  .eyebrow{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold-deep);margin-bottom:14px}
+  .lede{font-family:'Fraunces',serif;font-size:22px;line-height:1.45;color:var(--ink-2);margin:18px 0 28px;max-width:680px}
+  hr{border:0;border-top:1px solid var(--line);margin:48px 0}
+  .grid{display:grid;gap:20px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
+  .card h3{margin:0 0 6px;font-size:18px}
+  .card .pages{font-size:13px;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+  .card.recommend{border:1px solid var(--gold);box-shadow:0 1px 0 var(--gold) inset, 0 0 0 3px rgba(184,137,58,0.08)}
+  .pill{display:inline-block;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;background:var(--gold);color:#fff;padding:3px 8px;border-radius:3px;font-weight:600;margin-bottom:8px}
+  .pill.warn{background:#a23b2c}
+  .pill.muted{background:#272a31}
+  .callout{border-left:3px solid var(--gold);background:#fff;padding:18px 22px;margin:20px 0;border-radius:0 6px 6px 0}
+  .callout strong{color:var(--ink)}
+  .callout.warn{border-left-color:var(--bad)}
+  table{width:100%;border-collapse:collapse;margin:14px 0 24px;font-size:14px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;color:var(--ink);background:#fff}
+  td:first-child{font-weight:500;width:34%}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#fff;border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--ink)}
+  pre{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;overflow-x:auto;font-size:13px;line-height:1.5}
+  .meta{font-size:13px;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 22px;margin:28px 0 0;font-size:14px;column-count:2;column-gap:32px}
+  .toc a{display:block;color:var(--ink-2);text-decoration:none;padding:3px 0;break-inside:avoid}
+  .toc a:hover{color:var(--gold-deep)}
+  .toc .num{display:inline-block;width:22px;color:var(--muted);font-family:ui-monospace,monospace;font-size:12px}
+  .row{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+  .row > div{flex:1 1 280px}
+  .yes{color:var(--good);font-weight:600}
+  .no{color:var(--bad);font-weight:600}
+  ul.tight li{margin:2px 0}
+  .preview-link{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:12px 18px;border-radius:4px;text-decoration:none;font-weight:500;margin-top:12px}
+  .preview-link:hover{background:var(--gold-deep);color:#fff}
+  @media (max-width:680px){
+    .wrap{padding:40px 20px 80px}
+    h1{font-size:36px}
+    h2{font-size:24px}
+    .grid-3{grid-template-columns:1fr}
+    .toc{column-count:1}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Strategy &amp; build brief · April 2026</div>
+  <h1>Byron Floor Cleaning</h1>
+  <p class="lede">A 3-page conversion site for an NJ floor stripping &amp; waxing service backed by 25+ years of hands-on experience. Built static, submits leads to Google Apps Script, designed for phone-first action.</p>
+
+  <a class="preview-link" href="prototype.html">→ Open the interactive prototype</a>
+
+  <div class="toc">
+    <a href="#brand"><span class="num">00</span>Brand-name decision (read first)</a>
+    <a href="#sitemap"><span class="num">01</span>Sitemap options</a>
+    <a href="#conversion"><span class="num">02</span>Conversion strategy</a>
+    <a href="#home"><span class="num">03</span>Homepage structure</a>
+    <a href="#copy"><span class="num">04</span>Full copy draft</a>
+    <a href="#visual"><span class="num">05</span>Visual direction</a>
+    <a href="#assets"><span class="num">06</span>Asset plan</a>
+    <a href="#gallery"><span class="num">07</span>Before/after strategy</a>
+    <a href="#form"><span class="num">08</span>Lead form</a>
+    <a href="#seo"><span class="num">09</span>Local SEO</a>
+    <a href="#dev"><span class="num">10</span>Dev handoff (Claude Code)</a>
+  </div>
+
+  <hr/>
+
+  <h2 id="brand">00 · Brand-name decision <span class="pill warn">Decide first</span></h2>
+  <p>Your print materials use three different names. This is the single highest-leverage thing to fix before launch , Google, customers, and word-of-mouth all need one name.</p>
+  <table>
+    <tr><th>Name</th><th>Where it appears</th><th>Recommendation</th></tr>
+    <tr><td>Byron Flooring</td><td>Black/gold flyer + business card</td><td>Confusing , implies you sell/install flooring, not clean it.</td></tr>
+    <tr><td>Byron Floor Shine</td><td>White before/after flyer</td><td>Charming but doesn't match the domain.</td></tr>
+    <tr><td><strong>Byron Floor Cleaning</strong></td><td>The domain you own</td><td class="yes">Use this. Matches the URL, describes the service, easy to say on the phone.</td></tr>
+  </table>
+  <div class="callout"><strong>Action:</strong> Get one updated business card and a small magnet/sticker run with "Byron Floor Cleaning · ByronFloorcleaning.com · 908-691-5644" before any new marketing goes out. Old cards aren't wasted , just stop printing more.</div>
+
+  <h2 id="sitemap">01 · Sitemap , three options</h2>
+  <p>You picked the 3-page version, which I think is right for a one-person/small-crew local service. Here's how all three compare so you have it on file.</p>
+  <div class="grid grid-3">
+    <div class="card recommend">
+      <span class="pill">Recommended</span>
+      <h3>3 pages</h3>
+      <div class="pages">/ · /services · /estimate</div>
+      <p>Lowest maintenance, fastest to launch, every visitor lands within one click of the form. Before/after gallery lives on the homepage.</p>
+    </div>
+    <div class="card">
+      <h3>4 pages</h3>
+      <div class="pages">/ · /services · /gallery · /estimate</div>
+      <p>Adds a dedicated gallery once you have 8+ before/after pairs. Worth it later, not at launch.</p>
+    </div>
+    <div class="card">
+      <h3>5 pages</h3>
+      <div class="pages">+ /about · /contact</div>
+      <p>Only worth it once you're hiring, want to share your uncle's story for trust, or running paid ads. Premature today.</p>
+    </div>
+  </div>
+
+  <h2 id="conversion">02 · Conversion strategy</h2>
+  <h4>Primary CTA</h4>
+  <p><strong>"Get a Free Estimate"</strong> as the button label everywhere. The phone number , <code>908-691-5644</code> , is the secondary action and is shown as plain tappable text in the header, hero, and footer. On mobile, the header phone number is a tel: link with a phone icon.</p>
+
+  <h4>Where forms appear</h4>
+  <ul>
+    <li>Homepage , short inline form just below the before/after section.</li>
+    <li>Services page , short inline form at the bottom.</li>
+    <li><code>/estimate</code> , the form is the page.</li>
+    <li>Sticky bottom bar on mobile: "Call · Text · Estimate" , always one tap from action.</li>
+  </ul>
+
+  <h4>Trust elements (only what's true)</h4>
+  <ul>
+    <li>"25+ years of hands-on floor experience in NJ" , biggest trust lever you have. Use it in the hero. (Note: "with 25+ years of experience" reflects the owner's personal experience working with floors, not the legal age of the business , phrase it as "25+ years experience" rather than "in business with 25+ years of experience".)</li>
+    <li>Real before/after photos with location + floor type captions.</li>
+    <li>"24-hour reply to schedule your site visit" near the form. The actual quote happens after an in-person walkthrough , don't imply quotes go out within 24 hours.</li>
+    <li>"Free estimates · No obligation" repeated near every CTA.</li>
+    <li><strong>Leave room for:</strong> Google reviews, insurance/bonding badge, client logos. Add as your uncle collects them. Don't fabricate any.</li>
+  </ul>
+
+  <h4>Mobile drop-off reduction</h4>
+  <ul class="tight">
+    <li>Sticky <strong>Call · Text · Estimate</strong> bar pinned to bottom of viewport (the dominant pattern that beats hero CTAs on phones).</li>
+    <li>Form fields: 8 max, large tap targets (min 48px), numeric keyboard for phone + sqft.</li>
+    <li>Phone number is always tappable (<code>tel:</code>) and SMS is offered (<code>sms:</code>).</li>
+    <li>Hero image lazy-loaded; LCP target &lt; 2.5s on 4G.</li>
+    <li>No autoplaying anything. No popups.</li>
+  </ul>
+
+  <h2 id="home">03 · Homepage section plan</h2>
+  <ol>
+    <li><strong>Header</strong> , wordmark left, phone number + "Free Estimate" button right. On mobile, phone icon + hamburger.</li>
+    <li><strong>Hero</strong> , headline, subhead, two CTAs (Estimate / Call), trust line ("NJ · with 25+ years of experience · free estimates").</li>
+    <li><strong>Before &amp; After proof</strong> , 3 sliding pairs with captions. This is your strongest sales tool, so it goes high.</li>
+    <li><strong>Services overview</strong> , 5 cards: Strip &amp; wax · Tile &amp; grout · Vinyl care · One-time deep clean · Recurring maintenance.</li>
+    <li><strong>Why Byron</strong> , 4 short proofs: 25 years · Free estimates · 24-hr response · Residential &amp; commercial.</li>
+    <li><strong>Process</strong> , 3 steps: Request → Walkthrough/quote → Schedule. Reduces estimate-anxiety.</li>
+    <li><strong>Estimate form</strong> , short, inline. Same form as <code>/estimate</code>, posts to Apps Script.</li>
+    <li><strong>FAQ</strong> , 6 items (price, timing, area, disruption, types of floor, residential).</li>
+    <li><strong>Footer</strong> , phone, email, service area, hours, secondary nav.</li>
+  </ol>
+
+  <h2 id="copy">04 · Full copy draft</h2>
+  <p class="meta">Tone: trustworthy, clear, local, scannable. Reads like your uncle would talk on the phone , no marketing fluff.</p>
+
+  <h3>Homepage</h3>
+  <h4>Hero</h4>
+  <p><strong>Headline:</strong> Floors that look new again.<br/>
+  <strong>Alt headline:</strong> The shine your floors used to have.<br/>
+  <strong>Subhead:</strong> Professional stripping, waxing, and deep cleaning for VCT, tile, and vinyl floors across New Jersey. 25+ years of experience. Free estimates within 24 hours.<br/>
+  <strong>Primary CTA:</strong> Get a Free Estimate<br/>
+  <strong>Secondary CTA:</strong> Call 908-691-5644</p>
+
+  <h4>Before &amp; After</h4>
+  <p><strong>Section title:</strong> Real floors. Real results.<br/>
+  <strong>Subhead:</strong> Every job, photographed before and after. Drag the slider to see the difference.</p>
+
+  <h4>Services overview</h4>
+  <p><strong>Section title:</strong> What we do<br/>
+  <strong>Subhead:</strong> Five core services. Honest pricing after a free walkthrough.</p>
+  <ul>
+    <li><strong>Strip &amp; Wax (VCT)</strong> , Old wax and ground-in grime stripped down to the tile, then sealed with multiple coats of high-gloss commercial wax.</li>
+    <li><strong>Tile &amp; Grout Cleaning</strong> , Deep cleaning that pulls dirt out of grout lines and brings tile back to its original color.</li>
+    <li><strong>Vinyl Floor Care</strong> , Gentle cleaning and finishing that protects vinyl without damaging the surface.</li>
+    <li><strong>One-Time Deep Clean</strong> , A full reset for floors that have been neglected , perfect before a move-in, an inspection, or a busy season.</li>
+    <li><strong>Recurring Maintenance</strong> , Monthly or quarterly visits that keep floors looking new without the cost of a full strip every year.</li>
+  </ul>
+
+  <h4>Why Byron</h4>
+  <ul>
+    <li><strong>25 years in NJ</strong> , 25+ years of experience. We've seen every kind of floor.</li>
+    <li><strong>Free estimates</strong> , No charge to come look. No pressure if you don't book.</li>
+    <li><strong>24-hour response</strong> , Send a request today, hear back tomorrow.</li>
+    <li><strong>Homes &amp; businesses</strong> , Schools, offices, stores, and houses across the state.</li>
+  </ul>
+
+  <h4>Process</h4>
+  <ol>
+    <li><strong>Tell us about the floor.</strong> A few details by phone, text, or form.</li>
+    <li><strong>We give you a free quote.</strong> Honest, written, no obligation.</li>
+    <li><strong>We get to work.</strong> On your schedule , evenings and weekends available.</li>
+  </ol>
+
+  <h4>FAQ</h4>
+  <ul>
+    <li><strong>How much does it cost?</strong> Every floor is different. Pricing depends on square footage, condition, and floor type. Ask for a free estimate , most quotes go out within 24 hours.</li>
+    <li><strong>How long does a job take?</strong> A typical office or classroom is one overnight. Larger jobs are scheduled in sections so you can keep operating.</li>
+    <li><strong>Will the smell linger?</strong> No. We use commercial-grade products that dry quickly. Floors are walkable within a few hours.</li>
+    <li><strong>Do you work on weekends?</strong> Yes. Most commercial jobs happen overnight or on weekends so we don't disrupt your business.</li>
+    <li><strong>Do you do residential?</strong> Yes , kitchens, basements, sunrooms, and any vinyl, tile, or VCT in the home.</li>
+    <li><strong>What areas do you cover?</strong> All of New Jersey. If you're outside our usual route, ask anyway , we travel for larger jobs.</li>
+  </ul>
+
+  <h4>Footer</h4>
+  <p><strong>Tagline:</strong> Bringing shine back to NJ floors with 25+ years of experience.<br/>
+  <strong>Phone:</strong> 908-691-5644 · <strong>Text:</strong> 908-691-5644 · <strong>Email:</strong> byronfloorcleaning@gmail.com<br/>
+  <strong>Service area:</strong> All of New Jersey · <strong>Hours:</strong> Mon–Sat, 8am–8pm</p>
+
+  <h3>Services page</h3>
+  <p><strong>Headline:</strong> Five services. One clean floor.<br/>
+  <strong>Subhead:</strong> Whether it's one room or an entire building, here's exactly what we do and how we do it.</p>
+  <p>Long-form versions of the five services above, each with: who it's for, what's included, typical timeline, and a "Get a Quote for This" button that pre-fills the form.</p>
+
+  <h3>Estimate page</h3>
+  <p><strong>Headline:</strong> Get your free estimate.<br/>
+  <strong>Subhead:</strong> Fill out the form below and we'll get back to you within 24 hours with honest pricing , no obligation.</p>
+  <p><strong>Right rail / sidebar:</strong> "Prefer to talk? Call or text 908-691-5644 anytime. We're family-run and answer the phone ourselves."</p>
+
+  <h4>Form labels</h4>
+  <ul>
+    <li>Your name</li>
+    <li>Phone number</li>
+    <li>Email</li>
+    <li>Service address or city/zip</li>
+    <li>Floor type , VCT · Tile · Vinyl · Not sure</li>
+    <li>Approximate square footage <em>(it's okay to estimate)</em></li>
+    <li>Service needed , Strip &amp; wax · Tile &amp; grout · Vinyl care · Deep clean · Recurring · Not sure</li>
+    <li>How did you hear about us?</li>
+    <li>Anything else? <em>(optional)</em></li>
+  </ul>
+
+  <h4>Submit button</h4>
+  <p>Send my free estimate request</p>
+
+  <h4>Thank-you message</h4>
+  <p><strong>Headline:</strong> Got it. Talk soon.<br/>
+  <strong>Body:</strong> Thanks for reaching out. We'll review your request and get back to you within 24 hours with a free, honest quote. If it's urgent, feel free to call or text us at 908-691-5644 anytime.</p>
+
+  <h2 id="visual">05 · Visual direction</h2>
+  <p>Three directions live in the prototype as a tweak. My pick is <strong>Modern Premium</strong> , keeps the gold/black DNA from the flyers but inverts it: bright, readable surfaces with gold as an <em>accent</em>, not a fill. Black/gold-everywhere reads as flashy in print but as cluttered and untrustworthy on a 5" screen.</p>
+
+  <h4>Type</h4>
+  <p>Headlines in <strong>Fraunces</strong> (a warm, slightly traditional serif , references the cursive of the flyers without being decorative). Body in <strong>Inter</strong>. Phone numbers and small UI in Inter as well. Two families only.</p>
+
+  <h4>Color</h4>
+  <ul class="tight">
+    <li><strong>Ink</strong> <code>#0F1115</code> , primary text and dark surfaces</li>
+    <li><strong>Paper</strong> <code>#FAF8F3</code> , page background, warm off-white (not stark)</li>
+    <li><strong>Gold</strong> <code>#B8893A</code> , accent only: button hover, underlines, dividers</li>
+    <li><strong>Gold deep</strong> <code>#8A6420</code> , links, hover states</li>
+    <li><strong>Line</strong> <code>#E7E4DC</code> , borders, dividers</li>
+  </ul>
+
+  <h4>Buttons</h4>
+  <p>Primary: solid black with white text, gold underline accent on hover. Secondary: outlined with the phone number prefix and a small phone glyph. No drop shadows. 4px radius , restrained, not pill-shaped.</p>
+
+  <h4>Cards &amp; sections</h4>
+  <p>White cards on the warm-paper background, 1px line border, no shadow. Section dividers are a thin gold rule, 64px wide, centered. Imagery sits in 3:2 frames with a hairline border.</p>
+
+  <h4>How to use black/gold tastefully</h4>
+  <ul>
+    <li>One dark section per page (the hero <em>or</em> the testimonials block, never both).</li>
+    <li>Gold only on type elements ≥ 18px or as solid backgrounds , small gold body text is unreadable.</li>
+    <li>No gradients, no metallic textures, no marble. The flyers do that , the website does the opposite.</li>
+  </ul>
+
+  <h2 id="assets">06 · Asset plan</h2>
+  <table>
+    <tr><th>Asset</th><th>Where it goes</th><th>Notes</th></tr>
+    <tr><td>Black/gold business card</td><td class="no">Don't use as-is on the site.</td><td>Wordmark says "Byron Flooring" , wrong name. Reproduce the name as web type.</td></tr>
+    <tr><td>Black/gold portrait flyer</td><td class="no">Don't use.</td><td>Stock marble + ornate frame is the look we're moving away from.</td></tr>
+    <tr><td>Black/gold landscape flyer</td><td>Optional small thumb in footer "as seen on our flyer"</td><td>Only if it's printed and circulating , otherwise skip.</td></tr>
+    <tr><td>White before/after flyer</td><td class="yes">Source the raw before/after photos from this , they're real and excellent.</td><td>Use the underlying photos, not the composite. Strip the "Before"/"After" overlay text.</td></tr>
+    <tr><td>"100% Satisfaction Guaranteed" badge</td><td class="no">Don't use.</td><td>Stock badges look bought. Use a plain text guarantee instead.</td></tr>
+    <tr><td>Premium black/gold concept</td><td class="no">Don't use.</td><td>Inspiration for the gold accent, nothing more.</td></tr>
+  </table>
+  <div class="callout"><strong>Photos to collect from your uncle:</strong> 5–10 raw before/after pairs (no overlay text), one portrait of him on a job site (optional, builds trust), and one wide hero shot of a freshly waxed floor with reflection , that's the money shot.</div>
+
+  <h2 id="gallery">07 · Before/after strategy</h2>
+  <ul>
+    <li><strong>Drag-slider format</strong> on the homepage , single component, three pairs to start. Far more engaging than a side-by-side grid for the hero proof.</li>
+    <li><strong>Caption format:</strong> "Office hallway · Edison, NJ · VCT, strip &amp; wax · 1 night". Specific = credible.</li>
+    <li><strong>No filtering at 3 pairs.</strong> Add filter chips (VCT / Tile / Vinyl / Office / School / Home) once you cross 8 pairs, and split into the dedicated <code>/gallery</code> page (the 4-page sitemap).</li>
+    <li><strong>Mobile layout:</strong> stacked, full-width, swipeable. The slider handle should be at least 44px to be usable.</li>
+    <li><strong>Proof copy under each:</strong> one short sentence , what was wrong, what we did, how long it took.</li>
+  </ul>
+
+  <h2 id="form">08 · Lead form</h2>
+  <p><strong>Form length:</strong> 8 fields, single page. Multi-step is <strong>not</strong> worth it for this category , the user is already motivated when they reach the form, and steps add abandonment without adding qualification value.</p>
+  <h4>Anti-spam</h4>
+  <ul>
+    <li>Honeypot field (<code>name="website"</code>) hidden via CSS , bots fill it, humans don't.</li>
+    <li>Time-trap: reject submissions that arrive &lt; 2 seconds after page load.</li>
+    <li>Cloudflare Turnstile on the Apps Script endpoint if spam becomes a real problem (add later, not at launch).</li>
+    <li>Skip reCAPTCHA , it hurts conversion more than it helps for a low-volume local form.</li>
+  </ul>
+  <h4>Thank-you state</h4>
+  <p>In-page replacement (no redirect , keeps you on the URL for analytics). Headline: "Got it. Talk soon." Body confirms 24-hour response window and offers the phone number for urgency. Include a "what happens next" 3-step micro-list to set expectations.</p>
+
+  <h2 id="seo">09 · Local SEO</h2>
+  <h4>Page titles</h4>
+  <ul class="tight">
+    <li>Home: <code>Byron Floor Cleaning · Floor Stripping &amp; Waxing · New Jersey</code></li>
+    <li>Services: <code>Floor Stripping, Waxing &amp; Deep Cleaning Services · Byron Floor Cleaning</code></li>
+    <li>Estimate: <code>Get a Free Floor Cleaning Estimate · Byron Floor Cleaning · NJ</code></li>
+  </ul>
+  <h4>Meta descriptions</h4>
+  <ul class="tight">
+    <li>Home: "Floor stripping &amp; waxing across New Jersey, backed by 25+ years of hands-on experience. Free in-person estimates. Call or text 908-691-5644."</li>
+    <li>Services: "VCT, tile, and vinyl floor care for offices, schools, stores, and homes throughout NJ. One-time and recurring service."</li>
+    <li>Estimate: "Request a free in-person floor cleaning estimate. We respond within 24 hours to schedule. Serving all of New Jersey."</li>
+  </ul>
+  <h4>Local keyword targets</h4>
+  <ul class="tight">
+    <li>"floor stripping and waxing new jersey" / "near me"</li>
+    <li>"vct floor cleaning [city]"</li>
+    <li>"commercial floor waxing nj"</li>
+    <li>"school floor cleaning nj"</li>
+    <li>"office floor stripping [county]"</li>
+  </ul>
+  <h4>Schema</h4>
+  <p>Use <code>LocalBusiness</code> JSON-LD on every page with <code>@type: "HomeAndConstructionBusiness"</code> as a more specific child. Include name, telephone, areaServed (state of NJ), priceRange ("$$"), and a placeholder for hours. Add <code>FAQPage</code> schema on the homepage matching the visible FAQ.</p>
+  <h4>Service-area content (without keyword spam)</h4>
+  <p>One footer line , "Serving offices, schools, stores, and homes throughout New Jersey." Do <strong>not</strong> create one page per city. Instead, when you have a job in Union, write a short job-recap blog post (later) that earns a real local mention naturally. Google has gotten very good at penalizing doorway pages.</p>
+  <h4>Google Business Profile (most important)</h4>
+  <p>The website's local SEO ceiling is set by your <strong>Google Business Profile</strong>, not the site itself. Set it up with the real address (or service-area mode if your uncle works from home), real photos, weekly post updates, and ask every happy customer for a review with a direct review link. This will out-rank any on-page SEO work for local queries.</p>
+
+  <h2 id="dev">10 · Developer handoff (Claude Code)</h2>
+
+  <h4>Architecture</h4>
+  <ul>
+    <li>Static site. Three HTML files: <code>index.html</code>, <code>services.html</code>, <code>estimate.html</code>. Plus <code>thanks.html</code> (server-side fallback for users with JS off , JS path replaces in-place).</li>
+    <li>One shared <code>styles.css</code>, one <code>main.js</code> (≤ 8kb gzipped).</li>
+    <li>No build step required. Optional: Astro or 11ty if you want partials, but vanilla is fine for 3 pages.</li>
+    <li>Host: Cloudflare Pages or Netlify (free tier). Point GoDaddy DNS to it. SSL auto-provisioned.</li>
+  </ul>
+
+  <h4>Pages &amp; components</h4>
+  <ul class="tight">
+    <li><code>SiteHeader</code> , wordmark, phone, primary CTA</li>
+    <li><code>Hero</code> , variant prop (modern / dark-luxury / clean-light)</li>
+    <li><code>BeforeAfterSlider</code> , drag handle, keyboard accessible, lazy-loaded images</li>
+    <li><code>ServiceCard</code> , five instances</li>
+    <li><code>ProcessSteps</code> , three steps</li>
+    <li><code>EstimateForm</code> , used on home and /estimate</li>
+    <li><code>FAQ</code> , disclosure pattern, JSON-LD-friendly markup</li>
+    <li><code>SiteFooter</code></li>
+    <li><code>StickyMobileBar</code> , Call · Text · Estimate, &lt; 768px only</li>
+  </ul>
+
+  <h4>Responsive behavior</h4>
+  <ul class="tight">
+    <li>Mobile-first. Two breakpoints: 720px and 1080px.</li>
+    <li>Tap targets ≥ 44px. Form fields ≥ 48px. Body text ≥ 16px (no smaller than 14px anywhere).</li>
+    <li>Sticky bottom bar shown only ≤ 720px and only when the in-page form is not visible (IntersectionObserver).</li>
+  </ul>
+
+  <h4>Content model</h4>
+  <p>Plain JSON in <code>/content</code> (services.json, faq.json, gallery.json) so future edits don't require touching HTML:</p>
+  <pre>// services.json
+[{
+  "slug": "strip-wax-vct",
+  "name": "Strip &amp; Wax (VCT)",
+  "summary": "Old wax stripped, multiple coats of commercial wax sealed in.",
+  "details": "...",
+  "icon": "wax"
+}, ...]</pre>
+
+  <h4>Image handling</h4>
+  <ul class="tight">
+    <li>All photos served as <code>&lt;picture&gt;</code> with AVIF + WebP fallbacks, 3 widths (480 / 960 / 1600).</li>
+    <li>Hero LCP image preloaded.</li>
+    <li>Before/after images same dimensions per pair, lazy-loaded except the first pair (eager).</li>
+    <li>Alt text describes the floor + location, never the brand.</li>
+  </ul>
+
+  <h4>Form submission flow</h4>
+  <pre>1. User submits form
+2. JS validates required fields client-side
+3. POST application/x-www-form-urlencoded to Apps Script Web App URL
+   (urlencoded avoids CORS preflight , keeps Apps Script simple)
+4. Apps Script doPost(e):
+     - validates fields, checks honeypot + timestamp
+     - appends row to Google Sheet
+     - GmailApp.sendEmail to byronfloorcleaning@gmail.com
+     - returns { ok: true }
+5. JS swaps form for in-page thank-you state
+6. Fallback: form action="thanks.html" if JS fails</pre>
+  <p class="meta">Apps Script Web App must be deployed as <em>"Anyone, even anonymous"</em> with execution as the Sheet owner. Keep the Web App URL in a <code>config.js</code> file the dev can swap.</p>
+
+  <h4>Accessibility</h4>
+  <ul class="tight">
+    <li>Semantic landmarks (<code>header</code>, <code>main</code>, <code>nav</code>, <code>footer</code>).</li>
+    <li>All form fields have visible labels. No placeholder-only labels.</li>
+    <li>Focus states visible on every interactive element (2px gold outline).</li>
+    <li>Color contrast ≥ AA on every text + background pair.</li>
+    <li>Before/after slider is keyboard operable (arrow keys move handle).</li>
+    <li><code>prefers-reduced-motion</code> respected.</li>
+  </ul>
+
+  <h4>Performance</h4>
+  <ul class="tight">
+    <li>Lighthouse mobile ≥ 95 on all four metrics.</li>
+    <li>LCP &lt; 2.5s on 4G. CLS &lt; 0.05.</li>
+    <li>Total transfer first paint ≤ 200 KB. No frameworks. No web fonts beyond Inter + Fraunces (subsetted).</li>
+  </ul>
+
+  <h4>Deployment</h4>
+  <ul class="tight">
+    <li>Push to GitHub. Connect Cloudflare Pages (or Netlify).</li>
+    <li>Add CNAME on GoDaddy: <code>www → byronfloorcleaning.pages.dev</code>; ANAME/ALIAS apex to Cloudflare.</li>
+    <li>Add <code>robots.txt</code> + <code>sitemap.xml</code>.</li>
+    <li>Submit to Google Search Console + Bing Webmaster Tools. Verify Google Business Profile linkage.</li>
+    <li>Total monthly cost: $0 hosting + $20/year domain (already paid) + $0 forms.</li>
+  </ul>
+
+  <hr/>
+
+  <p class="meta">, End of brief. Open <a href="prototype.html">prototype.html</a> to see all three visual directions live, with toggleable tweaks for brand name, accent gold, hero variant, and form style.</p>
+
+</div>
+</body>
+</html>
