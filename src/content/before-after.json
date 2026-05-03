@@ -1,23 +1,30 @@
 [
   {
     "id": 1,
-    "caption": "Office hallway · Plainfield, NJ",
-    "detail": "VCT · strip & wax · 1 night",
-    "before": "/images/before-after/1-before.svg",
-    "after": "/images/before-after/1-after.svg"
+    "kind": "slider",
+    "caption": "School VCT classroom",
+    "detail": "Strip & wax · overnight",
+    "before": "/images/before-after/school-before.jpg",
+    "beforeAlt": "School classroom mid-job: dingy beige VCT tile floor with cleaning streaks and a yellow mop bucket in the room",
+    "after": "/images/before-after/school-after.jpg",
+    "afterAlt": "Same school floor after strip and wax: tan VCT tile with a high-gloss finish reflecting the windows"
   },
   {
     "id": 2,
-    "caption": "School classroom · Edison, NJ",
-    "detail": "VCT · strip, wax, 4 coats · weekend",
-    "before": "/images/before-after/2-before.svg",
-    "after": "/images/before-after/2-after.svg"
+    "kind": "photo",
+    "caption": "Commercial classroom · VCT",
+    "detail": "Stripped, sealed, multi-coat wax",
+    "image": "/images/commercial-proof.jpg",
+    "alt": "Bright yellow VCT tile floor in a school classroom, glossy and reflective from a fresh coat of commercial wax"
   },
   {
     "id": 3,
-    "caption": "Retail showroom · New Brunswick, NJ",
-    "detail": "Tile · deep clean & seal · 1 day",
-    "before": "/images/before-after/3-before.svg",
-    "after": "/images/before-after/3-after.svg"
+    "kind": "slider",
+    "caption": "Residential dining room · Hardwood",
+    "detail": "Deep clean & polish",
+    "before": "/images/before-after/residential-before.jpg",
+    "beforeAlt": "Residential dining room hardwood floor before cleaning: stained oak planks with a dull, hazy surface near the leg of a dining table",
+    "after": "/images/residential-proof.jpg",
+    "afterAlt": "Same residential dining room after deep clean and polish: stained oak hardwood floor with a soft, even sheen and clean grain visible across the planks"
   }
 ]

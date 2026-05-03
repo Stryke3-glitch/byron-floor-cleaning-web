@@ -23,13 +23,25 @@ export interface FaqItem {
   a: string;
 }
 
-export interface BeforeAfterPair {
-  id: number;
-  caption: string;
-  detail: string;
-  before: string;
-  after: string;
-}
+export type BeforeAfterPair =
+  | {
+      id: number;
+      kind: 'slider';
+      caption: string;
+      detail: string;
+      before: string;
+      beforeAlt: string;
+      after: string;
+      afterAlt: string;
+    }
+  | {
+      id: number;
+      kind: 'photo';
+      caption: string;
+      detail: string;
+      image: string;
+      alt: string;
+    };
 
 export const telHref = `tel:${site.phoneRaw}`;
 export const smsHref = `sms:${site.phoneRaw}`;
