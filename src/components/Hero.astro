@@ -1,0 +1,95 @@
+---
+import { site, telHref } from '../lib/site';
+
+interface Props {
+  variant?: 'home' | 'page' | 'light';
+  eyebrow?: string;
+  title: string;
+  italicWord?: string;
+  body?: string;
+  showCtas?: boolean;
+}
+const {
+  variant = 'home',
+  eyebrow = 'Residential & commercial · All of NJ',
+  title,
+  italicWord,
+  body,
+  showCtas = true,
+} = Astro.props;
+
+const isDark = variant !== 'light';
+---
+<section
+  class:list={[
+    'border-b',
+    isDark ? 'bg-hero-bg text-hero-ink border-transparent' : 'bg-surface text-ink border-line',
+    variant === 'home' ? 'py-20 md:py-28' : 'py-14 md:py-20',
+  ]}
+>
+  <div class="container-x grid items-center gap-12 md:grid-cols-[1.15fr_1fr]">
+    <div>
+      <div class:list={['eyebrow mb-5', isDark ? 'text-accent-bright' : 'text-accent']}>{eyebrow}</div>
+      <h1
+        class:list={[
+          'h-display font-medium leading-[1.05] tracking-[-0.025em]',
+          variant === 'home' ? 'text-[clamp(40px,7vw,76px)]' : 'text-[clamp(34px,5vw,56px)]',
+        ]}
+      >
+        {italicWord ? (
+          <Fragment set:html={title.replace(italicWord, `<em class=\"text-accent-bright\">${italicWord}</em>`)} />
+        ) : title}
+      </h1>
+      {body && (
+        <p class:list={['mt-6 text-[17px] leading-[1.55] max-w-[540px]', isDark ? 'text-hero-sub' : 'text-muted']}>{body}</p>
+      )}
+      {showCtas && (
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/estimate" class:list={['btn', isDark ? 'btn-on-dark' : 'btn-primary']}>
+            Get a Free Estimate
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href={telHref} class:list={['btn', isDark ? 'btn-ghost-on-dark' : 'btn-secondary']}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            {site.phone}
+          </a>
+        </div>
+      )}
+      {variant === 'home' && (
+        <div class:list={['mt-9 flex flex-wrap gap-x-6 gap-y-2 text-[13px]', isDark ? 'text-hero-sub' : 'text-muted']}>
+          <span class="inline-flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+            {site.experience}
+          </span>
+          <span class="inline-flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+            Free in-person quotes
+          </span>
+          <span class="inline-flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+            24-hr scheduling reply
+          </span>
+        </div>
+      )}
+    </div>
+
+    {variant === 'home' && (
+      <div class="relative aspect-[4/5] rounded overflow-hidden border border-line-strong bg-bg">
+        <img
+          src="/images/hero-placeholder.svg"
+          alt="Freshly waxed VCT floor reflecting overhead lighting"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          width="800"
+          height="1000"
+        />
+        <div class="absolute bottom-4 left-4 right-4 bg-white/95 border border-line rounded p-3.5 backdrop-blur-sm">
+          <div class="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">Latest job</div>
+          <div class="text-[14px] text-ink mt-1">3,200 sq ft school cafeteria · stripped &amp; waxed overnight</div>
+        </div>
+      </div>
+    )}
+  </div>
+</section>

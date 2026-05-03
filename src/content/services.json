@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "strip-wax",
+    "name": "Strip & Wax",
+    "short": "VCT, deep refinish",
+    "body": "Old wax and ground-in grime stripped down to bare tile, then sealed with multiple coats of commercial-grade high-gloss wax. The full reset.",
+    "timeline": "1 night for a typical office",
+    "feature": true,
+    "eyebrow": "Most requested"
+  },
+  {
+    "slug": "tile-grout",
+    "name": "Tile & Grout",
+    "short": "Restore the color of dingy grout lines",
+    "body": "Deep cleaning that pulls embedded dirt out of grout and brings tile back to its original color, without the chemical fumes of harsh restorers.",
+    "timeline": "1 day for a kitchen or bathroom"
+  },
+  {
+    "slug": "vinyl",
+    "name": "Vinyl Floor Care",
+    "short": "Gentle, no surface damage",
+    "body": "Cleaning and finishing tuned for vinyl, so you get the gloss back without scratching, hazing, or stripping the protective layer.",
+    "timeline": "1 day for a typical home"
+  },
+  {
+    "slug": "recurring",
+    "name": "Recurring Maintenance",
+    "short": "Monthly or quarterly",
+    "body": "We come back on a schedule that keeps floors looking new, without the cost of a full strip and wax every year. Most clients save money in year two.",
+    "timeline": "Ongoing",
+    "eyebrow": "Save year over year"
+  },
+  {
+    "slug": "deep-clean",
+    "name": "One-Time Deep Clean",
+    "short": "For floors that have been let go",
+    "body": "A complete reset for floors that have been neglected. Perfect before a move-in, an inspection, or a busy season. One visit, one bill, big difference.",
+    "timeline": "1 to 2 days"
+  }
+]

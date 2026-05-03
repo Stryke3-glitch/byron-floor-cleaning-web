@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+  }
+
+  *:focus-visible {
+    outline: 2px solid theme('colors.accent');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-sans text-[12px] font-semibold uppercase tracking-[0.16em] text-accent;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: currentColor;
+    display: inline-block;
+  }
+
+  .eyebrow-bright {
+    @apply text-accent-bright;
+  }
+
+  .h-display {
+    @apply font-display font-medium tracking-tight;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded font-sans text-[15px] font-semibold leading-none transition-colors duration-150 ease-out;
+    padding: 14px 22px;
+    min-height: 48px;
+  }
+
+  .btn-primary {
+    @apply bg-ink text-white border border-ink hover:bg-[#1f2229];
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-ink border border-ink hover:bg-ink hover:text-white;
+  }
+
+  .btn-on-dark {
+    @apply bg-white text-ink border border-white hover:bg-bg;
+  }
+
+  .btn-ghost-on-dark {
+    @apply bg-transparent text-hero-ink border border-hero-sub hover:bg-white/10;
+  }
+
+  .field-input {
+    @apply w-full rounded border border-line-strong bg-surface px-[14px] py-3 font-sans text-[15px] text-ink outline-none focus:border-ink;
+    min-height: 48px;
+  }
+
+  .hairline {
+    @apply border-line;
+  }
+}

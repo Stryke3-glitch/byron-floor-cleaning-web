@@ -1,0 +1,32 @@
+---
+import { site, telHref } from '../lib/site';
+interface Props {
+  title?: string;
+  body?: string;
+}
+const {
+  title = 'Ready for a quote?',
+  body = 'Free estimates in our standard service area. We reply within 24 hours to schedule your site visit.',
+} = Astro.props;
+---
+<section class="bg-hero-bg text-hero-ink">
+  <div class="container-x py-16 md:py-24 text-center">
+    <div class="inline-flex items-center gap-2 mb-4 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent-bright">
+      <span class="inline-block w-[18px] h-[2px] bg-accent-bright"></span>
+      Get in touch
+      <span class="inline-block w-[18px] h-[2px] bg-accent-bright"></span>
+    </div>
+    <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight max-w-[720px] mx-auto">{title}</h2>
+    <p class="mt-4 text-[17px] text-hero-sub max-w-[620px] mx-auto leading-[1.55]">{body}</p>
+    <div class="mt-7 flex justify-center flex-wrap gap-3">
+      <a href="/estimate" class="btn btn-on-dark">
+        Get a Free Estimate
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href={telHref} class="btn btn-ghost-on-dark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        {site.phone}
+      </a>
+    </div>
+  </div>
+</section>

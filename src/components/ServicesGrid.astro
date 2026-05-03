@@ -1,0 +1,91 @@
+---
+import { services } from '../lib/site';
+
+interface Props {
+  full?: boolean;
+}
+const { full = false } = Astro.props;
+---
+<section class="bg-surface border-y border-line">
+  <div class="container-x py-16 md:py-24">
+    <div class="max-w-[760px]">
+      <div class="eyebrow mb-4">What we do</div>
+      <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight">Five services. One clean floor.</h2>
+      <p class="mt-3.5 text-[17px] text-muted leading-[1.55]">Whether it's one room or a whole building, here's exactly what we offer.</p>
+    </div>
+
+    <div class="byron-services-grid mt-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+      {services.map((s, i) => {
+        const isFeature = !!s.feature;
+        const span = isFeature
+          ? 'sm:col-span-2 lg:col-span-3 lg:row-span-2'
+          : 'lg:col-span-3 lg:row-span-1';
+        return (
+          <article
+            class:list={[
+              'relative overflow-hidden flex flex-col rounded border',
+              span,
+              isFeature
+                ? 'bg-feature-bg text-hero-ink border-feature-bg p-8 min-h-[280px]'
+                : 'bg-bg border-line p-6 min-h-[140px]',
+            ]}
+          >
+            {isFeature && (
+              <div
+                class="absolute inset-0 pointer-events-none opacity-35"
+                style="background: radial-gradient(ellipse at 75% 110%, #E5B970 0%, transparent 55%);"
+              ></div>
+            )}
+            <div class="relative flex flex-col h-full">
+              {s.eyebrow && (
+                <div
+                  class:list={[
+                    'eyebrow mb-3',
+                    isFeature ? 'text-accent-bright' : 'text-accent',
+                  ]}
+                >{s.eyebrow}</div>
+              )}
+              <h3
+                class:list={[
+                  'h-display font-semibold tracking-[-0.01em]',
+                  isFeature ? 'text-[28px] md:text-[32px] text-hero-ink' : 'text-[19px] text-ink',
+                ]}
+              >{s.name}</h3>
+              <p
+                class:list={[
+                  'mt-2 leading-[1.55]',
+                  isFeature ? 'text-[15px] text-[#D8D2C2] max-w-[380px]' : 'text-[13px] text-muted',
+                ]}
+              >{full ? s.body : (isFeature ? s.body : s.short)}</p>
+              {full && (
+                <div
+                  class:list={[
+                    'mt-auto pt-3 border-t text-[12px]',
+                    isFeature ? 'border-white/15 text-[#D8D2C2]' : 'border-line text-ink2',
+                  ]}
+                >
+                  <span class:list={[isFeature ? 'text-[#B5AE9C]' : 'text-muted']}>Typical timeline: </span>{s.timeline}
+                </div>
+              )}
+              {isFeature && !full && (
+                <div class="mt-auto pt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-accent-bright">
+                  Includes strip, seal, and multi-coat wax
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    {!full && (
+      <div class="text-center mt-10">
+        <a href="/services" class="btn btn-secondary">
+          See all services
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    )}
+  </div>
+</section>

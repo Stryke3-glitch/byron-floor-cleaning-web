@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyByron from '../components/WhyByron.astro';
+import EstimateForm from '../components/EstimateForm.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site } from '../lib/site';
+import { localBusiness, faqPage } from '../lib/jsonld';
+
+const title = `${site.brand} · Floor Stripping & Waxing · New Jersey`;
+const description = site.metaDescription;
+---
+<BaseLayout
+  title={title}
+  description={description}
+  pathname="/"
+  jsonLd={[localBusiness, faqPage]}
+>
+  <Hero
+    title="Floors that look new again."
+    body={`Professional stripping, waxing, and deep cleaning for VCT, tile, and vinyl floors across New Jersey. Backed by ${site.experience}. Free in-person estimates in our standard service area, scheduled within 24 hours.`}
+  />
+  <BeforeAfter />
+  <ServicesGrid />
+  <WhyByron />
+  <HowItWorks />
+  <section class="bg-bg">
+    <div class="container-x py-16 md:py-24">
+      <div class="max-w-[880px] mx-auto">
+        <div class="max-w-[760px]">
+          <div class="eyebrow mb-4">Get a quote</div>
+          <h2 class="h-display text-[clamp(28px,4vw,44px)] leading-[1.1] tracking-tight">Tell us about your floor.</h2>
+          <p class="mt-3.5 text-[17px] text-muted leading-[1.55]">A few short questions. We'll reach out within 24 hours to schedule your free site visit.</p>
+        </div>
+        <div class="mt-8">
+          <EstimateForm embedded source="home" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <Faq />
+  <CtaBand />
+</BaseLayout>

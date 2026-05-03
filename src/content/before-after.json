@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "caption": "Office hallway · Plainfield, NJ",
+    "detail": "VCT · strip & wax · 1 night",
+    "before": "/images/before-after/1-before.svg",
+    "after": "/images/before-after/1-after.svg"
+  },
+  {
+    "id": 2,
+    "caption": "School classroom · Edison, NJ",
+    "detail": "VCT · strip, wax, 4 coats · weekend",
+    "before": "/images/before-after/2-before.svg",
+    "after": "/images/before-after/2-after.svg"
+  },
+  {
+    "id": 3,
+    "caption": "Retail showroom · New Brunswick, NJ",
+    "detail": "Tile · deep clean & seal · 1 day",
+    "before": "/images/before-after/3-before.svg",
+    "after": "/images/before-after/3-after.svg"
+  }
+]
